@@ -1,5 +1,8 @@
-import 'package:ai_doktorum_online/homeScreen.dart';
+// lib/main.dart
+
 import 'package:flutter/material.dart';
+import 'package:ai_doktorum_online/home_screen.dart';
+import 'package:ai_doktorum_online/theme/app_theme.dart';
 
 void main() {
   runApp(const MyApp());
@@ -10,9 +13,10 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: HomeScreen(),
+    return MaterialApp(
+      title: 'Doktorum Online AI',
+      theme: AppTheme.lightTheme,
+      home: const Homescreen(),
     );
   }
 }
