@@ -7,11 +7,13 @@ class CustomTextWidget extends StatelessWidget {
   final IconData icon;
   final TextInputType keyboardType;
   final int maxLines;
+  final TextEditingController controller;
 
   const CustomTextWidget({
     super.key,
     required this.title,
     required this.icon,
+    required this.controller,
     this.keyboardType = TextInputType.text,
     this.maxLines = 1,
   });
@@ -24,6 +26,7 @@ class CustomTextWidget extends StatelessWidget {
       child: TextFormField(
         keyboardType: keyboardType,
         maxLines: maxLines,
+        controller: controller,
         decoration: InputDecoration(
           labelText: title,
           prefixIcon: Icon(icon, color: Colors.teal),
